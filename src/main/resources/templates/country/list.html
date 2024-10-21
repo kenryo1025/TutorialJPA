@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http>://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -18,6 +18,8 @@
             <td th:text="${data.code}"></td>
             <td th:text="${data.name}"></td>
             <td th:text="${data.population}"></td>
+            <td><a th:href="@{http://localhost:8080/country/detail/{code}/(code=${data.code})}">詳細</a></td>
+            <td><a th:href="@{http://localhost:8080/country/delete/{code}/(code=${data.code})}">削除</a></td>
         </tr>
     </table>
 </body>
